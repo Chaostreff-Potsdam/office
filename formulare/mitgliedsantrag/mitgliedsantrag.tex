@@ -1,0 +1,123 @@
+\documentclass[a4paper, 10pt, DIV=14, BCOR=10mm, headings=normal]{scrartcl}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\usepackage{amssymb}
+
+\setlength{\columnsep}{6mm}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\usepackage{graphicx}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+
+\usepackage{enumitem}
+
+\usepackage{calc}
+
+\title{Mitgliedsantrag}
+\author{Chaos Computer Club Potsdam e.~V.}
+\date{}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newcommand{\checkbox}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	$\square$%
+	\hspace*{2.5mm}%
+	\begin{minipage}[t]{\linewidth}%
+		\strut#1\strut%
+	\end{minipage}%
+	\vspace{0.75mm}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+	\includegraphics[trim=0mm 5mm 0mm 5mm]{title.pdf}
+\end{center}
+
+\section*{Persönliche Daten}
+
+\begin{textinput}{\linewidth}%
+	Vorname, Name
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	Geburtsdatum
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	Adresse%
+	\vspace{20mm}
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	E-Mail-Adresse
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	PGP-Fingerprint {\footnotesize (optional)}
+\end{textinput}
+
+\section*{Mitgliedsstatus}
+
+\noindent%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\checkbox{regulär {\footnotesize (23,42~€ pro Monat)}}%
+	\checkbox{Student {\footnotesize (13,37~€ pro Monat)}}%
+	\checkbox{ermäßigt {\footnotesize (9,00~€ pro Monat)}}%
+	\checkbox{Kind unter 16 Jahren {\footnotesize (2,56~€ pro Monat)}}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\begin{textinput}{\linewidth}%
+		Begründung \footnotesize (falls ermäßigt, erforderliche Nachweise bitte beifügen)%
+		\vspace{20mm}%
+	\end{textinput}%
+\end{minipage}
+
+\section*{Einverständniserklärung}
+
+Hiermit trete ich dem \emph{Chaos Computer Club Potsdam} e.~V. (CCCP) als Mitglied bei.
+Ich habe die beigefügte Datenschutzerklärung zur Kenntnis genommen und stimme dieser zu.\strut
+
+\bigskip
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Ort, Datum%
+\end{textinput}%
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Unterschrift \footnotesize (bei Minderjährigen: Unterschrift Erziehungsberechtigte)%
+	\vspace{20mm}%
+\end{textinput}%
+
+\end{document}
