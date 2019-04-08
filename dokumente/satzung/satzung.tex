@@ -1,0 +1,250 @@
+\documentclass[a4paper, 10pt, headings=normal]{scrartcl}
+\KOMAoptions{twoside=true}
+
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm, bindingoffset=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\renewcommand\sectionformat{§~\thesection\enskip}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\title{\textcolor{alert}{// Entwurf //} \textcolor{gray}{Satzung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}}
+\author{\includegraphics[width=70mm, trim=1.19mm 1.19mm 1.19mm 1.19mm]{title.pdf}}
+\date{Errichtet am 10.~April 2019 in Potsdam}
+
+\begin{document}
+
+\maketitle
+\pagestyle{myheadings}
+\markboth{Satzung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}{Satzung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+
+\begin{multicols}{2}
+
+\section{Name, Sitz, Zweck und Geschäftsjahr}
+\label{par:name-sitz-zweck}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Der Verein trägt den Namen \emph{Chaos Computer Club Potsdam} e.~V. (CCCP).
+		Er soll in das Vereinsregister eingetragen werden.
+		Sitz des Vereins ist Potsdam.
+		Der Verein wird in Abstimmung mit dem Chaos Computer Club e.~V., Sitz Hamburg, als selbständiger Verein dessen lokale Repräsentanz bilden.
+	\item
+		Zweck des Vereins ist die Vernetzung von IT-Fachleuten und verwandter Fachpersonen mit dem Ziel des Betriebs eines Vereinsheims für Datenreisende.
+	\item
+		Der Verein veranstaltet hierzu Tagungen, organisiert Erfahrungsaustausch, macht Beratungsangebote, sammelt Schenkungen, vergibt Preise, Zuschüsse und Stipendien und ergreift darüber hinaus alle zur Verfolgung des Vereinszwecks für sinnvoll erachteten Maßnahmen.
+	\item
+		Das Geschäftsjahr entspricht dem Kalenderjahr.
+\end{enumerate}
+
+\section{Mitgliedschaft}
+\label{par:mitgliedschaft}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Die Mitgliedschaft im Verein steht allen natürlichen und juristischen Personen offen, die den Vereinszweck zu fördern in der Lage sind.
+		Sie wird durch Antrag beim Vorstand erworben, der diesen Antrag allen Mitgliedern binnen vier Wochen nach Eingang bekanntzumachen hat.
+
+		Erhebt binnen zwei Wochen nach Absendung der Mitteilung kein Mitglied Widerspruch gegenüber einem Vorstandsmitglied, so stimmt der Vorstand über den Antrag ab und teilt dem Antragsteller die Aufnahme oder Ablehnung mit.
+		Hat ein Mitglied Widerspruch erhoben, so entscheidet die Mitgliedsversammlung über den Aufnahmeantrag.
+
+		Juristische Personen, deren gesetzliche Vertreter Mitglieder des Vereins sind, können ohne Anwendung von Fristen durch Beschluss von Vorstand oder Mitgliedsversammlung aufgenommen werden.
+	\item
+		Die Mitgliedschaft endet:
+		\begin{enumerate}[label={\arabic*.}]
+			\item
+				durch schriftliche Austrittserklärung gegenüber einem Vorstandsmitglied,
+			\item
+				bei natürlichen Personen durch deren Tod,
+			\item
+				bei juristischen Personen durch Löschung, Auflösung, Liquidation, Eröffnung des Insolvenzverfahrens, Fusion, Rechtsformänderung, wesensveränderndem Eigentümerwechsel oder sonstiger Beendigung der rechtlichen Existenz oder
+			\item
+				durch Ausschluss aus dem Verein.
+		\end{enumerate}
+	\item
+		Der Vorstand kann Mitglieder wegen vereinsschädigenden Verhaltens sowie wegen Verstoßes gegen Verpflichtungen gemäß §~\ref{par:rechte-pflichten-mitglieder} aus dem Verein ausschließen.
+		Der Ausschluss ist an die letzte mitgeteilte Anschrift des betreffenden Mitglieds mitzuteilen und ist zum Zeitpunkt der Absendung wirksam.
+		Dem Ausgeschlossenen steht die Berufung bei der nächsten Mitgliedsversammlung offen; diese entscheidet gegebenenfalls über die rückwirkende Unwirksamkeit des Ausschlusses.
+\end{enumerate}
+
+\section{Rechte und Pflichten der Mitglieder}
+\label{par:rechte-pflichten-mitglieder}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Alle Vereinsmitglieder haben die Pflicht,
+		\begin{enumerate}[label={\arabic*.}]
+			\item
+				jederzeit die Interessen des Vereins zu wahren,
+			\item
+				festgesetzte Umlagen und Beiträge unverzüglich bei Fälligkeit zu zahlen,
+			\item
+				dem Vorstand laufend und unverzüglich ihre aktuelle Anschrift mitzuteilen und
+			\item
+				auf gesonderte Ladung durch den Vorstand hin an Vorstandssitzungen und Mitgliedsversammlungen teilzunehmen.
+		\end{enumerate}
+	\item
+		Alle Vereinsmitglieder haben das Recht, an der Mitgliedsversammlung teilzunehmen und dort abzustimmen.
+		Juristische Personen nehmen durch ihre gesetzlichen Vertreter teil und üben durch diese ihre Mitgliedschaftsrechte aus.
+	\item
+		Alle Vereinsmitglieder haben das Recht, vom Vorstand unter Nennung gewünschter Tagesordnungspunkte und gegebenenfalls abzustimmender Beschlussvorlagen die Einberufung einer Mitgliedsversammlung zu verlangen, die binnen vier Wochen nach Eingang beim Vorstand stattzufinden hat.
+\end{enumerate}
+
+\section{Organe}
+\label{par:organe}
+
+Organe des Vereins sind
+\begin{itemize}[label={–}]
+	\item
+		die Mitgliedsversammlung und
+	\item
+		der Vorstand.
+\end{itemize}
+
+\section{Mitgliedsversammlung}
+\label{par:mitgliederversammlung}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Die Mitgliedsversammlung tritt mindestens einmal pro Kalenderjahr zusammen.
+		Die Mitgliedsversammlung wird vom Vorstand mit einer Ladungsfrist von mindestens 14~Tagen und Angabe einer Tagesordnung schriftlich einberufen.
+	\item
+		Jedes Mitglied hat eine Stimme.
+		Vertreter juristischer Personen haben ihre Vertretungsberechtigung nachzuweisen.
+	\item
+		Die Mitgliedsversammlung fasst ihre Beschlüsse mit einfacher Mehrheit der abgegebenen Stimmen.
+		Stimmenthaltungen werden nicht mitgezählt.
+	\item
+		Jede ordnungsgemäß geladene Mitgliedsversammlung ist beschlussfähig.
+	\item
+		Versammlungsleiter ist der 1. Vorsitzende, der 2. Vorsitzende als sein Vertreter oder ein von der Mitgliedsversammlung zu Beginn zu wählender Versammlungsleiter.
+	\item
+		Über die Beschlüsse der Mitgliedsversammlung ist eine Niederschrift anzufertigen, die allen Mitgliedern binnen vier Wochen nach der Versammlung zuzustellen ist.
+\end{enumerate}
+
+\section{Vorstand}
+\label{par:vorstand}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Der Vorstand besteht aus
+		\begin{itemize}[label={–}]
+			\item
+				dem 1. Vorsitzenden,
+			\item
+				dem 2. Vorsitzenden und
+			\item
+				dem Schatzmeister.
+		\end{itemize}
+		Diese werden von der Mitgliedsversammlung gewählt und sind Vorstand im Sinne des §~26 BGB.
+		Sie vertreten den Verein jeweils allein gerichtlich und außergerichtlich.
+	\item
+		Darüber hinaus kann die Mitgliedsversammlung bis zu drei Beisitzer als stimmberechtigte Vorstandsmitglieder wählen.
+		Der Vorstand fasst seine Beschlüsse mit einfacher Mehrheit der abgegebenen Stimmen, Stimmenthaltungen werden nicht mitgezählt.
+		Der Vorstand regelt seine Geschäftsverteilung durch gesonderten Vorstandsbeschluss und darf einzelnen Vereinsmitgliedern Vollmachten zur Vertretung des Vereins in bestimmten Angelegenheiten erteilen.
+		Vorstandssitzungen werden vom 1. oder 2. Vorsitzenden mit einer Ladungfrist von drei Tagen schriftlich einberufen.
+	\item
+		Der Vorstand kann einzelne Personen als Berater hinzuziehen, diese haben dann kein Stimmrecht im Vorstand.
+		Die Einberufenen können bestimmen, dass die Sitzung in fernmündlicher oder mittels sonstiger Nachrichtenübermittlung geschieht.
+		Über die Beschlüsse ist eine Niederschrift anzufertigen, die allen Vorstandmitgliedern binnen einer Woche nach der Sitzung zuzustellen ist.
+	\item
+		Die Vorstandsmitglieder bleiben im Amt, bis die Mitgliedsversammlung einen Nachfolger wählt.
+		Dies soll in der Regel nach zweijähriger Amtzeit geschehen; die Wiederwahl ist zulässig.
+		Erklärt ein Beisitzer gegenüber einem Vorstand seinen Rücktritt, so scheidet er damit aus.
+		Erklärt ein Vorstandsmitglied gegenüber dem Vorstand seinen Rücktritt, scheidet es aus dem Verein aus, oder ist langfristig an der Ausübung seines Amtes gehindert, so wählt die Mitgliedsversammlung binnen vier Wochen einen Nachfolger.
+\end{enumerate}
+
+\section{Finanzen}
+\label{par:finanzen}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Der Verein finanziert seine Tätigkeit durch Beiträge, Umlagen und Schenkungen, ferner durch Erlöse aus Veranstaltungen und sonstigen dem Vereinszweck dienenden Maßnahmen.
+		Der Verein ist nicht auf eigenwirtschaftliche Tätigkeit ausgerichtet und soll keine Gewinne erzielen, sondern vielmehr als Idealverein wirken.
+		Entstehende Kosten und Defizite sind durch Beiträge und Umlagen der Mitglieder auszugleichen.
+	\item
+		Beitrags- und Umlageverpflichtungen sowie Vorgaben zur Mittelverwendung werden durch vom Vorstand erlassene Ordnungen geregelt.
+		Über die Annahme von Schenkungen entscheidet der Vorstand.
+		Der gesamte Vorstand ist gegenüber der Mitgliedsversammlung für die Finanzen des Vereins verantwortlich und hat dieser mindestens einmal im Kalenderjahr einen Finanzbericht zu erstatten, worauf die Mitgliedsversammlung über die Entlastung des Vorstands abzustimmen hat.
+\end{enumerate}
+
+\section{Satzungsänderungen}
+\label{par:satzungsaenderungen}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		Über Änderungen und Ergänzungen dieser Satzung entscheidet die Mitgliedsversammlung mit Dreiviertelmehrheit.
+		Sollten einzelne Bestimmungen dieser Satzung unwirksam sein oder werden, so gelten sie als durch solche wirksame Satzungsbestimmungen ersetzt, die dem Zweck der jeweiligen Bestimmung am nächsten kommen.
+	\item
+		Satzungsänderungen, die von Aufsichts\mbox{-,} Gerichts- oder Finanzbehörden aus formalen Gründen verlangt werden, kann der Vorstand von sich aus vornehmen.
+		Diese Satzungsänderungen müssen der nächsten Mitgliedsversammlung mitgeteilt werden.
+\end{enumerate}
+
+\section{Auflösung}
+\label{par:aufloseung}
+
+Die Auflösung des Vereins geschieht durch Beschluss der Mitgliedsversammlung mit Dreiviertelmehrheit.
+Die Mitgliedsversammlung hat einen Liquidator zu bestellen.
+Diesbezügliche Bekanntmachnungen erfolgen im \emph{elektronischen Bundesanzeiger}.
+Ein eventueller Liquidationserlös wird nicht an die Vereinsmitglieder ausgeschüttet, sondern kommt einem von der Mitgliedsversammlung mit einfacher Mehrheit zu bestimmenden Zweck oder Empfänger zu.
+Mangels anderslautenden Beschlusses fällt der Liquidationserlös an das Land Brandenburg.
+
+\section{Kommunikation}
+\label{par:kommunikation}
+
+Schriftliche Erklärungen im Sinne dieser Satzung sind handschriftlich unterschriebene Dokumente in Papierform sowie mit geeigneten Mitteln signierte elektronische Dokumente (E-Mail).
+
+\end{multicols}
+
+\section*{Einverständniserklärung}
+
+Potsdam, 10. April 2019
+
+\bigskip
+
+\begin{textinput}{\linewidth}%
+	Unterschriften Gründungsmitglieder
+	\vspace{100mm}%
+\end{textinput}%
+
+\end{document}
