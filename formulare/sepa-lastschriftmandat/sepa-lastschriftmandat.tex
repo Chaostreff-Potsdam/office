@@ -1,0 +1,110 @@
+\documentclass[a4paper, 10pt, DIV=14, BCOR=10mm, headings=normal]{scrartcl}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\usepackage{amssymb}
+
+\setlength{\columnsep}{6mm}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\usepackage{graphicx}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+
+\usepackage{enumitem}
+
+\usepackage{calc}
+
+\title{Mitgliedsantrag}
+\author{Chaos Computer Club Potsdam e.~V.}
+\date{}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[b]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newcommand{\checkbox}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	$\square$%
+	\hspace*{2.5mm}%
+	\begin{minipage}[b]{\linewidth}%
+		\strut#1\strut%
+	\end{minipage}%
+	\vspace{0.75mm}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+	\includegraphics[trim=0mm 5mm 0mm 5mm]{title.pdf}
+\end{center}
+
+\bigskip
+
+\noindent
+Ich/wir ermächtige(n) den \emph{Chaos Computer Club Potsdam} e.~V. (CCCP), Zahlungen wiederkehrend von meinem/unserem Konto mittels Lastschrift einzuziehen.
+Zugleich weise(n) ich/wir mein/unser Kreditinstitut an, die vom Zahlungsempfänger auf mein/unser Konto gezogenen Lastschriften einzulösen.
+
+\emph{Hinweis: Ich kann/wir können innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen.
+Es gelten dabei die mit meinem/unserem Kreditinstitut vereinbarten Bedingungen.}
+
+\section*{Kontoverbindung}
+
+\begin{textinput}{\linewidth}%
+	Vorname, Name
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	Adresse%
+	\vspace{15mm}
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	Kreditinstitut
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	BIC
+\end{textinput}
+\begin{textinput}{\linewidth}%
+	IBAN
+\end{textinput}
+
+\section*{Einverständniserklärung}
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Ort, Datum%
+\end{textinput}%
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Unterschrift%
+	\vspace{20mm}%
+\end{textinput}%
+
+\end{document}
