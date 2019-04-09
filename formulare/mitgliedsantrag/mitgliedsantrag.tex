@@ -10,8 +10,6 @@
 \setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
 \newfontface\textinputfont{Barlow Condensed}
 
-\usepackage{amssymb}
-
 \setlength{\columnsep}{6mm}
 
 \usepackage{microtype}
@@ -54,8 +52,8 @@
 	\vspace{0.75mm}%
 	\noindent%
 	\linespread{1}%
-	$\square$%
-	\hspace*{2.5mm}%
+	\includegraphics[trim=0mm 0.3mm 0mm 0mm]{checkbox.pdf}%
+	\hspace*{1.75mm}%
 	\begin{minipage}[b]{\linewidth}%
 		\strut#1\strut%
 	\end{minipage}%
