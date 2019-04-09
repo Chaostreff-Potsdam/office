@@ -1,0 +1,276 @@
+\documentclass[a4paper, 10pt, headings=normal]{scrartcl}
+\KOMAoptions{twoside=true}
+
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm, bindingoffset=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+%\renewcommand\sectionformat{\thesection\enskip}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+\definecolor{medium-gray}{RGB}{211, 215, 207}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\usepackage{mdframed}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newmdenv
+[
+	topline=false,
+	bottomline=false,
+	rightline=false,
+	linecolor=medium-gray,
+	linewidth=2pt,
+	usetwoside=false,
+	innerleftmargin=8.4pt,
+	innerrightmargin=0pt
+]{address}
+
+\title{\textcolor{alert}{// Entwurf //} \textcolor{gray}{Datenschutzerklärung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}}
+%\author{}
+\author{\includegraphics[width=70mm, trim=1.19mm 1.19mm 1.19mm 1.19mm]{title.pdf}}
+\date{Stand: 10.~April 2019}
+
+\begin{document}
+
+\maketitle
+\pagestyle{myheadings}
+\markboth{Datenschutzerklärung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}{Datenschutzerklärung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+
+\begin{multicols*}{2}
+
+\noindent Wir sind gemäß DSGVO dazu verpflichtet, Sie über die Verarbeitung Ihrer Daten im Verlaufe unserer vorvertraglichen und vertraglichen Maßnahmen zu informieren.
+Bitte nehmen Sie sich einen Moment Zeit, um dieses Informationsblatt durchzulesen.
+
+\section{Kontakt und Verantwortlicher}%
+%
+\begin{address}\strut%
+	\textbf{Chaos Computer Club Potsdam e.~V.}
+
+	\noindent c/o freiLand // \textcolor{alert}{1. Vorsitzender, 2. Vorsitzender}
+
+	\noindent Friedrich-Engels-Str.~22
+
+	\noindent 14473~Potsdam
+
+	\medskip
+
+	\noindent Telefon: +49 \textcolor{alert}{XXX XXXXXXXX}
+
+	\noindent E-Mail: datenschutz@ccc-p.org
+
+	\noindent Webseite: http://www.ccc-p.org/\strut
+\end{address}
+
+\section{Rechtsgrundlagen}
+
+Wir verarbeiten Ihre personenbezogenen Daten rechtmäßig basierend auf Ihrer ausdrücklichen Einwilligung (Art.~6 Abs.~1a DSGVO) für die folgenden Zwecke:
+
+\begin{enumerate}[label={\arabic*.}]
+	\item
+		zur Erfüllung unserer vertraglichen Verpflichtungen (Art.~6 Abs.~1b DSGVO),
+	\item
+		zur Durchführung vorvertraglicher Maßnahmen (Art.~6 Abs.~1b DSGVO) und
+	\item
+		zur Wahrung gesetzlicher Pflichten (Art.~6 Abs.~1c DSGVO).
+\end{enumerate}
+
+Außerdem verarbeiten wir Ihre Daten aufgrund des berechtigten Interesses unseres Vereins (Art.~6 Abs.~1f DSGVO). Dies umfasst:
+
+\begin{enumerate}[label={\arabic*.}]
+	\item
+		interne Verwaltung und notwendige Korrespondenz,
+	\item
+		Buchhaltung und
+	\item
+		Geltendmachung, Ausübung oder Verteidigung rechtlicher Ansprüche.
+\end{enumerate}
+
+Sie haben das Recht, diese Einwilligung jederzeit zu widerrufen, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.
+
+\section{Datenverarbeitung Vereinsmitgliedschaft}
+
+Wir verarbeiten die folgenden personenbezogenen Daten von Vereinsmitgliedern:
+
+\begin{enumerate}[label={\arabic*.}]
+	\item
+		Kontaktdaten (Name, vollständige Adresse und E-Mail-Adresse),
+	\item
+		Bankverbindungsdaten (Kontoinhaber, Kreditinstitut, BIC und IBAN) und
+	\item
+		sonstige Daten (Bescheinigungen (Anspruchsnachweis, Spendenquittung etc.) und ehrenamtliche Tätigkeiten für den Verein).
+\end{enumerate}
+
+Die von einem Vereinsmitglied bereitgestellten Daten sind zur Vertragserfüllung sowie zur Durchführung vorvertraglicher Maßnahmen erforderlich.
+Ohne diese Daten können wir den Vertrag mit dem Vereinsmitglied nicht abschließen.
+\emph{Die Angabe von Bankverbindungsdaten (für das SEPA-Lastschriftverfahren) und die Erbringung eines Anspruchsnachweises für Ermäßigungen des Mitgliedsbeitrages sind nicht zwingend erforderlich.}
+
+Die personenbezogenen Daten des Vereinsmitglieds werden bei uns nur solange gespeichert, wie es für die jeweiligen Zwecke notwendig ist, für den wir diese Daten erhoben haben.
+Aus rechtlichen Gründen müssen wir Rechnungen, relevante Verträge und sonstige Dokumente für sechs oder zehn Jahre aufbewahren.
+In Einzelfällen kann die Speicherdauer mehr als zehn Jahre betragen, etwa bei anhängigen Behördenverfahren.
+In diesem Fall werden wir das Vereinsmitglied gesondert darüber informieren.
+
+\emph{Wir haben entsprechende Autorisierungsstrukturen umgesetzt und Verschwiegenheitsverpflichtungen mit jenen Personen abgeschlossen, die Zugriff auf diese Daten haben.}
+
+\section{Datenverarbeitung Kontaktaufnahme}
+
+Eine Kontaktaufnahme über die bereitgestellten E-Mail-Adressen ist möglich.
+In diesem Fall werden die mit der E-Mail übermittelten personenbezogenen Daten des Nutzers gespeichert.
+Es erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte. Die Daten werden ausschließlich für die Verarbeitung der Konversation oder des Anliegens verwendet.
+
+Die Verarbeitung der personenbezogenen Daten dient uns allein zur Bearbeitung der Kontaktaufnahme.
+Im Falle einer Kontaktaufnahme per E-Mail liegt hieran das erforderliche berechtigte Interesse an der Verarbeitung der Daten.
+Die sonstigen während des Absendevorgangs verarbeiteten personenbezogenen Daten dienen dazu, die Sicherheit unserer informationstechnischen Systeme sicherzustellen.
+
+Die Daten bleiben \emph{maximal 3 Monate ab Beendigung der Korrespondenz} gespeichert, es sei denn, es bestehen gesetzliche Verpflichtungen, ein berechtigtes Interesse unsererseits oder sonstige vertragliche Verpflichtungen.
+
+Der Nutzer hat jederzeit die Möglichkeit, seine Einwilligung zur Verarbeitung der personenbezogenen Daten zu widerrufen.
+
+Nimmt der Nutzer per E-Mail Kontakt mit uns auf, so kann er der Speicherung seiner personenbezogenen Daten jederzeit widersprechen.
+In einem solchen Fall kann die Konversation nicht fortgeführt werden.
+
+Sollte der Nutzer der Speicherung der Daten widersprechen wollen, kann der Widerspruch via E-Mail eingereicht werden.
+Alle personenbezogenen Daten, die im Zuge der Kontaktaufnahme gespeichert wurden, werden in diesem Fall gelöscht.
+
+\section{Datenverarbeitung Newsletter}
+
+Wir versenden regelmäßig Newsletter mit Neuigkeiten und Informationen über den Verein und dessen Tätigkeiten an Abonnenten.
+
+Wir versenden Newsletter nur an Abonnenten, die uns eine ausdrückliche Einwilligung diesbezüglich erteilt und eine E-Mail-Adresse angegeben haben.
+In diesem Fall werden die E-Mail-Adresse und die Einwilligung gespeichert.
+Um zu überprüfen, dass eine angegebene E-Mail-Adresse gültig ist und dessen Inhaber tatsächlich die Einwilligung erteilt hat, senden wir vorab eine zusätzliche Bestätigungs-E-Mail (\emph{double opt-in}).
+
+Es erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte.
+Die Daten werden ausschließlich für den Versand der Newsletter verwendet.
+
+Die Daten bleiben \emph{bis zur Abmeldung} gespeichert, es sei denn, es bestehen gesetzliche Verpflichtungen, ein berechtigtes Interesse unsererseits oder sonstige vertragliche Verpflichtungen.
+
+Der Nutzer hat jederzeit die Möglichkeit, seine Einwilligung zur Verarbeitung der personenbezogenen Daten zu widerrufen.
+Dafür genügt eine formlose E-Mail an \textcolor{alert}{unsubscribe@ccc-p.org} mit dem Betreff „Abmeldung Newsletter“. Ein entsprechender Hinweis zur Abmeldung befindet sich zusätzlich in jedem Newsletter.
+
+\section{Auftragsverarbeiter Server-Hosting: netcup}
+
+Sämtliche Daten, die durch das Anbieten von Servern, Kontaktmöglichkeiten, Verwaltungssystemen und den Websiten des Vereins anfallen, werden auf Serversystemen von \emph{netcup} gespeichert.
+Verantwortliche des Unternehmens sind:\strut%
+
+\begin{address}\strut%
+	\noindent Felix Preuß und Oliver Werner
+
+	\noindent \textbf{netcup GmbH}
+
+	\noindent Daimlerstr.~25
+
+	\noindent 76185~Karlsruhe
+
+	\medskip
+
+	\noindent Telefon: +49 721 75407550
+
+	\noindent Telefax: +49 721 75407559
+
+	\noindent Webseite: https://www.netcup.de/\strut
+\end{address}
+
+Entsprechende Verträge zur Auftragsverarbeitung liegen vor.
+Es findet keine Datenübermittlung in Drittländer außerhalb des EWR-Raumes statt.
+
+\section{Rechte der betroffenen Personen}
+
+\subsection{Auskunftsrecht}
+
+Sie können von dem Verantwortlichen eine Bestätigung darüber verlangen, ob personenbezogene Daten, die Sie betreffen, von uns verarbeitet werden.
+
+Dazu zählen unter anderem: Kategorie der personenbezogenen Daten, Empfänger, Verarbeitungszwecke, Speicherdauer, Herkunft (sofern die Daten aus Drittquellen kommen), Informationen über automatisierte Entscheidungsfindung, deren Details und gegebenenfalls Profiling.
+\emph{Wir wenden weder automatisierte Entscheidungsfindungsverfahren noch Profiling an.}
+
+Außerdem können Sie Auskunft über Ihre Rechte verlangen (Beschwerderecht, Löschung, Berichtigung, Einschränkung der Verarbeitung).
+
+\subsection{Recht auf Berichtigung}
+
+Sie haben ein Recht auf Berichtigung sowie Vervollständigung gegenüber dem Verantwortlichen, sofern die verarbeiteten personenbezogenen Daten, die Sie betreffen, unrichtig oder unvollständig sind.
+Der Verantwortliche hat die Berichtigung unverzüglich vorzunehmen.
+
+\subsection{Recht auf Einschränkung der Verarbeitung und Löschung}
+
+Sie können die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten verlangen, wenn Sie die Richtigkeit bestreiten, die Verarbeitung unrechtmäßig ist und Sie die Löschung ablehnen und stattdessen die Einschränkung der Nutzung verlangen, wir diese Daten nicht mehr benötigen, Sie diese jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen, oder wenn Sie Widerspruch gegen die Verarbeitung gemäß Art.~21 Abs.~1 DSGVO eingelegt haben.
+
+Sie können weiters von dem Verantwortlichen verlangen, dass die Sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, und der Verantwortliche ist verpflichtet, dies zu tun, außer die Verarbeitung ist erforderlich zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses, zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+
+\subsection{Recht auf Datenübertragbarkeit}
+
+Sie haben das Recht, die Sie betreffenden personenbezogenen Daten, die Sie dem Verantwortlichen bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
+Außerdem haben Sie das Recht, diese Daten einem anderen Verantwortlichen übermitteln zu lassen.
+
+\subsection{Widerspruchs- und Widerrufsrecht}
+
+Sie haben das Recht, Ihre datenschutzrechtliche Einwilligungserklärung jederzeit zu widerrufen.
+Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt.
+Sie haben ebenso das Recht aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art.~6 Abs. 1e oder~1f DSGVO erfolgt, Widerspruch einzulegen.
+
+Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung zum Zwecke derartiger Werbung einzulegen.
+
+\subsection{Recht auf Beschwerde bei einer Aufsichtsbehörde}
+
+Ihnen steht das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.
+Sie können sich grundsätzlich an die zuständige Aufsichtsbehörde Ihres Wohnortes oder Arbeitsplatz wenden.
+
+\section{Schlussworte}
+
+Wir hoffen, dass wir Ihnen mit diesen Informationen Klarheit über die Prozesse zur Verarbeitung Ihrer personenbezogenen Daten verschafft haben.
+Sollten Sie noch Fragen zur Verarbeitung Ihrer Daten haben oder andere Anliegen, die dieses Thema betreffen, zögern Sie bitte nicht, sich an uns zu wenden.
+
+\section*{Einverständniserklärung}
+
+Ich habe diese Datenschutzerklärung zur Kenntnis genommen und erteile dem Chaos Computer Club Potsdam e.~V. meine Einwilligung zur Verarbeitung meiner personenbezogenen Daten.\strut%
+
+\bigskip
+
+\begin{textinput}{\linewidth}%
+	Ort, Datum%
+\end{textinput}%
+
+\begin{textinput}{\linewidth}%
+	Unterschrift \footnotesize (bei Minderjährigen: Unterschrift Erziehungsberechtigte)%
+	\vspace{20mm}%
+\end{textinput}%
+
+\end{multicols*}
+
+\end{document}
