@@ -1,0 +1,168 @@
+\documentclass[a4paper, landscape, 10pt, headings=normal]{scrartcl}
+
+\usepackage[left=25mm, right=25mm, top=20mm, bottom=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+%\renewcommand\sectionformat{\thesection\enskip}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+\definecolor{medium-gray}{RGB}{211, 215, 207}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\usepackage{mdframed}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newcommand{\entry}%
+{%
+	\noindent%
+	\begin{minipage}[b]{55mm}%
+		\begin{textinput}{\linewidth}%
+			\vspace*{12.5pt}%
+		\end{textinput}%
+	\end{minipage}%
+	\hspace{1mm}%
+	\begin{minipage}[b]{55mm}%
+		\begin{textinput}{\linewidth}%
+			\vspace*{12.5pt}%
+		\end{textinput}%
+	\end{minipage}%
+	\hspace{1mm}%
+	\begin{minipage}[b]{30mm}%
+		\begin{textinput}{\linewidth}%
+			\vspace*{12.5pt}%
+		\end{textinput}%
+	\end{minipage}%
+	\hspace{1mm}%
+	\begin{minipage}[b]{60mm}%
+		\begin{textinput}{\linewidth}%
+			\vspace*{12.5pt}%
+		\end{textinput}%
+	\end{minipage}%
+	\hspace{1mm}%
+	\begin{minipage}[b]{43mm}%
+		\begin{textinput}{\linewidth}%
+			\vspace*{12.5pt}%
+		\end{textinput}%
+	\end{minipage}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+	\linespread{1}
+	\huge{\textbf{Anwesenheitsliste Gründungsversammlung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}}
+\end{center}
+
+\bigskip
+
+\noindent%
+\begin{minipage}[b]{55mm}%
+	\textbf{Vorname}%
+\end{minipage}%
+\hspace{1mm}%
+\begin{minipage}[b]{55mm}%
+	\textbf{Name}%
+\end{minipage}%
+\hspace{1mm}%
+\begin{minipage}[b]{30mm}%
+	\textbf{Geburtsdatum}%
+\end{minipage}%
+\hspace{1mm}%
+\begin{minipage}[b]{60mm}%
+	\textbf{Adresse}%
+\end{minipage}%
+\hspace{1mm}%
+\begin{minipage}[b]{43mm}%
+	\textbf{Unterschrift}%
+\end{minipage}%
+\strut%
+
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-1.85mm]
+\entry
+\\[-2.35mm]
+\noindent%
+\begin{minipage}[t]{74.5mm}%
+	\begin{textinput}{\linewidth}%
+		Ort, Datum%
+	\end{textinput}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[t]{52.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschriften Vorstand%
+		\vspace{15mm}%
+	\end{textinput}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[t]{52.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Schriftführer%
+		\vspace{15mm}%
+	\end{textinput}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[t]{52.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Versammlungsleiter%
+		\vspace{15mm}%
+	\end{textinput}%
+\end{minipage}%
+
+\end{document}
