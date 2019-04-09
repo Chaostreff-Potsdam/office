@@ -38,7 +38,7 @@
 	\noindent%
 	\linespread{1}%
 	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
-		\begin{minipage}[t]{\linewidth}%
+		\begin{minipage}[b]{\linewidth}%
 			\textinputfont\strut%
 }%
 {%
@@ -56,7 +56,7 @@
 	\linespread{1}%
 	$\square$%
 	\hspace*{2.5mm}%
-	\begin{minipage}[t]{\linewidth}%
+	\begin{minipage}[b]{\linewidth}%
 		\strut#1\strut%
 	\end{minipage}%
 	\vspace{0.75mm}%
@@ -90,6 +90,17 @@
 \end{textinput}
 
 \section*{Mitgliedsbeitrag}
+
+\noindent%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\checkbox{Unterstützer {\footnotesize (Betrag frei wählbar)}}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\begin{textinput}{\linewidth}%
+		Monatlicher Beitrag%
+	\end{textinput}%
+\end{minipage}
 
 \noindent%
 \begin{minipage}[c]{0.5\linewidth - 2.5mm}%
