@@ -1,0 +1,117 @@
+\documentclass[a4paper, 10pt, headings=normal]{scrartcl}
+\KOMAoptions{twoside=true}
+
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm, bindingoffset=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\renewcommand\sectionformat{§~\thesection\enskip}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 236}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\title{Beitragsordnung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+\author{Stand: 10.~April 2019}%}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagestyle{myheadings}
+\markboth{Beitragsordnung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}{Beitragsordnung des Vereins \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+
+\begin{multicols*}{2}
+
+\section{Höhe der Beiträge (gestaffelt)}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		\label{itm:beitrag-regulaer}
+		Der Mitgliedsbeitrag beträgt \textbf{23,42~€} pro Monat.
+	\item
+		\label{itm:beitrag-student}
+		Der Mitgliedsbeitrag für Studierende beträgt \textbf{13,37~€} pro Monat.
+		Er erfordert die Vorlage einer Studienbescheinigung.
+	\item
+		Der ermäßigte Mitgliedsbeitrag beträgt \textbf{9,00~€} pro Monat.
+		Die Ermäßigung gilt für Schüler, Auszubildende, Arbeitslose, Rentner, Erwerbsgeminderte und Schwerbehinderte.
+		Er erfordert die Vorlage eines schriftlichen Nachweises.
+		Der ermäßigte Beitrag ist in weiteren Fällen nur durch begründete Anfrage zu erwerben.
+		Der Vorstand entscheidet über die Annahme dieser Begründung.
+	\item
+		Der Mitgliedsbeitrag für Personen unter 16 Jahren beträgt \textbf{2,56~€}.
+	\item
+		\emph{Erhöhter Beitrag:} Es ist den Mitgliedern freigestellt, den Beitrag über den in \ref{itm:beitrag-regulaer} und~\ref{itm:beitrag-student} genannten monatlichen Beitrag zu erhöhen.
+		Mehreinzahlungen werden als erhöhter Beitrag aufgefasst.
+\end{enumerate}
+
+\section{Fälligkeit}
+
+Der Mitgliedsbeitrag wird jeweils zum 1.~des Monats sowie mit der Annahme des Aufnahmeantrags fällig.
+
+\section{Zahlungsweise}
+
+\begin{enumerate}[label={(\arabic*)}]
+	\item
+		\label{itm:ueberweisung}
+		Die Zahlung des Beitrages erfolgt monatlich auf das Konto des \emph{Chaos Computer Club Potsdam} e.~V.
+		Es wird empfohlen, einen Dauerauftrag einzurichten.
+	\item
+		Alternativ zu \ref{itm:ueberweisung} kann nach Absprache eine Barzahlung an den Schatzmeister erfolgen.
+\end{enumerate}
+
+\section{Säumnis}
+
+Im Säumnisfall wird das Mitglied nach dreimonatigem Ausbleiben des Beitrags schriftlich gemahnt.
+Zahlt ein Mitglied trotz zweifacher Mahnung oder länger als drei Monate den Beitrag nicht, so gilt nach Ablauf eines Monates nach der zweiten Mahnung die Nichtzahlung als Austritt.
+In der zweiten Mahnung ist auf die Folgen der Nichtzahlung hinzuweisen.
+
+\section{Aufnahmegebühren}
+
+Aufnahmegebühren werden nicht erhoben.
+
+\section{Erstattungen}
+
+Eine Erstattung von Mitgliedsbeiträgen findet nicht statt.
+
+\end{multicols*}
+
+\end{document}
