@@ -1,6 +1,6 @@
 \documentclass[a4paper, landscape, 10pt, headings=normal]{scrartcl}
 
-\usepackage[left=25mm, right=25mm, top=20mm, bottom=10mm]{geometry}
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm]{geometry}
 
 \usepackage{polyglossia}
 \setmainlanguage[spelling=new, latesthyphen=true]{german}
@@ -50,36 +50,39 @@
 	\vspace{0.75mm}%
 }
 
-\newcommand{\entry}%
+\newcommand{\entry}[4]%
 {%
 	\noindent%
-	\begin{minipage}[b]{55mm}%
+	\begin{minipage}[b]{45mm}%
 		\begin{textinput}{\linewidth}%
-			\vspace*{12.5pt}%
+			\rmfamily#1%
+			\vfill%
 		\end{textinput}%
 	\end{minipage}%
 	\hspace{1mm}%
-	\begin{minipage}[b]{55mm}%
+	\begin{minipage}[b]{45mm}%
 		\begin{textinput}{\linewidth}%
-			\vspace*{12.5pt}%
+			\rmfamily#2%
+			\vfill%
 		\end{textinput}%
 	\end{minipage}%
 	\hspace{1mm}%
-	\begin{minipage}[b]{30mm}%
+	\begin{minipage}[b]{45mm}%
 		\begin{textinput}{\linewidth}%
-			\vspace*{12.5pt}%
+			\rmfamily#3%
+			\vfill%
 		\end{textinput}%
 	\end{minipage}%
 	\hspace{1mm}%
-	\begin{minipage}[b]{60mm}%
+	\begin{minipage}[b]{63mm}%
 		\begin{textinput}{\linewidth}%
-			\vspace*{12.5pt}%
+			\rmfamily#4%
 		\end{textinput}%
 	\end{minipage}%
 	\hspace{1mm}%
-	\begin{minipage}[b]{43mm}%
+	\begin{minipage}[b]{45mm}%
 		\begin{textinput}{\linewidth}%
-			\vspace*{12.5pt}%
+			\vfill%
 		\end{textinput}%
 	\end{minipage}%
 }
@@ -90,53 +93,47 @@
 
 \begin{center}
 	\linespread{1}
-	\huge{\textbf{Anwesenheitsliste Gründungsversammlung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}}
+	\huge{\textbf{Anwesenheitsliste der Gründungsversammlung des \\ \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}}
 \end{center}
 
 \bigskip
 
 \noindent%
-\begin{minipage}[b]{55mm}%
+\begin{minipage}[b]{45mm}%
 	\textbf{Vorname}%
 \end{minipage}%
 \hspace{1mm}%
-\begin{minipage}[b]{55mm}%
+\begin{minipage}[b]{45mm}%
 	\textbf{Name}%
 \end{minipage}%
 \hspace{1mm}%
-\begin{minipage}[b]{30mm}%
+\begin{minipage}[b]{45mm}%
 	\textbf{Geburtsdatum}%
 \end{minipage}%
 \hspace{1mm}%
-\begin{minipage}[b]{60mm}%
+\begin{minipage}[b]{63mm}%
 	\textbf{Adresse}%
 \end{minipage}%
 \hspace{1mm}%
-\begin{minipage}[b]{43mm}%
+\begin{minipage}[b]{45mm}%
 	\textbf{Unterschrift}%
 \end{minipage}%
 \strut%
 
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
 \\[-1.85mm]
-\entry
-\\[-1.85mm]
-\entry
-\\[-1.85mm]
-\entry
-\\[-1.85mm]
-\entry
-\\[-2.35mm]
+\entry{Vorname}{Name}{TT.~Monat JJJJ}{Zeile~1 \\ Zeile~2}
+
 \noindent%
 \begin{minipage}[t]{74.5mm}%
 	\begin{textinput}{\linewidth}%
@@ -146,22 +143,22 @@
 \hspace*{5mm}%
 \begin{minipage}[t]{52.5mm}%
 	\begin{textinput}{\linewidth}%
-		Unterschriften Vorstand%
-		\vspace{15mm}%
-	\end{textinput}%
-\end{minipage}%
-\hspace*{5mm}%
-\begin{minipage}[t]{52.5mm}%
-	\begin{textinput}{\linewidth}%
-		Unterschrift Schriftführer%
-		\vspace{15mm}%
+		Unterschrift 1.~Vorsitzender%
+		\vspace{20mm}%
 	\end{textinput}%
 \end{minipage}%
 \hspace*{5mm}%
 \begin{minipage}[t]{52.5mm}%
 	\begin{textinput}{\linewidth}%
 		Unterschrift Versammlungsleiter%
-		\vspace{15mm}%
+		\vspace{20mm}%
+	\end{textinput}%
+\end{minipage}%
+\hspace*{5mm}%
+\begin{minipage}[t]{52.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Schriftführer%
+		\vspace{20mm}%
 	\end{textinput}%
 \end{minipage}%
 
