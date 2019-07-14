@@ -1,0 +1,172 @@
+\documentclass[a4paper, 10pt, headings=normal]{scrartcl}
+\KOMAoptions{twoside=true}
+
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm, bindingoffset=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 238}
+\definecolor{medium-gray}{RGB}{211, 211, 211}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\usepackage{mdframed}
+
+\usepackage{calc}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newmdenv
+[
+	topline=false,
+	bottomline=false,
+	rightline=false,
+	linecolor=medium-gray,
+	linewidth=2pt,
+	usetwoside=false,
+	innerleftmargin=8.4pt,
+	innerrightmargin=0pt
+]{address}
+
+\newcommand{\votesign}[1]{\includegraphics[trim=0pt 0.15pt 0pt 0pt]{vote-#1.pdf}}
+\newcommand{\votesingle}[2]{\votesign{#1}~#2}
+\newcommand{\vote}[3]{\votesingle{yes}{#1}, \votesingle{no}{#2}, \votesingle{abstention}{#3}}
+
+\title{Beschlussprotokoll \\ der außerordentlichen Mitgliederversammlung \\ des \emph{Chaos Computer Club Potsdam} e.~V. (CCCP) \\ am 31.~Mai 2019}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagestyle{myheadings}
+\markboth{Protokoll der Gründungsversammlung des \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}{Protokoll der Gründungsversammlung des \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+
+%\begin{multicols}{2}
+
+\noindent Am heutigen Freitag, dem 31.~Mai 2019, versammelten sich um {19:03}~Uhr im
+\begin{address}\strut%
+	\textbf{freiLand Potsdam,} Haus 5
+
+	\noindent Friedrich-Engels-Str.~22
+
+	\noindent 14473~Potsdam
+\end{address}
+vier Mitglieder des Chaos Computer Club Potsdam e.~V.:
+
+\begin{itemize}
+	\item Patrick Lühne,
+	\item Nico Kay Pritzkow,
+	\item Sven Köhler,
+	\item Matthias Jacob und
+	\item Felix Grzelka (ab {19:06} Uhr).
+\end{itemize}
+
+Laut Satzung §~5 Abs.~4 war die Mitgliederversammlung beschlussfähig.
+
+Um {19:03}~Uhr begrüßte Sven Köhler die Erschienenen und eröffnete die Mitgliederversammlung des \emph{Chaos Computer Club Potsdam} e.~V.
+Herr Köhler schlug vor, die Versammlungsleitung zu übernehmen und Herrn Lühne zum Protokollführer zu bestimmen.
+Dieser Vorschlag wurde einstimmig angenommen.
+
+Herr Köhler (nachfolgend \emph{Versammlungsleiter} genannt) schlug als Wahlverfahren für alle Abstimmungen das Abstimmen durch Handzeichen vor (im Nachfolgenden stehen \votesign{yes} für Zustimmung, \votesign{no} für Ablehnung und \votesign{abstention} für Enthaltung).
+Auch diesem Vorschlag stimmten allen Anwesenden zu.
+
+Der Versammlungsleiter schlug die folgende Tagesordnung vor.
+
+\section*{Tagesordnung}
+
+\begin{enumerate}
+	\item
+		Begrüßung durch den Vorstand
+	\item
+		Wahl der Versammlungsleiter und Protokollführer
+	\item
+		Vorbehaltsbeschluss für die Satzungsänderung zur Umbenennung des Vereins
+	\item
+		Aussetzen der Mitgliedsbeiträge im Mai 2019
+	\item
+		Sonstiges
+\end{enumerate}
+Über die Tagesordnung wurde abgestimmt.
+Die Anwesenden stimmten der Tagesordnung einstimmig zu ({\vote{4}{0}{0}}).
+
+Um {19:06}~Uhr betrat Felix Grzelka die Mitgliederversammlung.
+
+\section{Vorbehaltsbeschluss für die Satzungsänderung zur Umbenennung des Vereins}
+
+Herr Köhler schlug vor, den Verein unter Vorbehalt umzubenennen.
+Als neuen Namen schlug er \emph{Chaostreff Potsdam} e.~V. und die Kurzform CCCP vor.
+Zu diesem Zweck schlug er vor, die Namensänderung im Titel sowie §~1 Abs.~1 der Satzung umzusetzen.
+
+Als Beweggrund für die Umbenennung nannte Herr Köhler noch zu klärende Unstimmigkeiten mit dem Chaos Computer Club e.~V.
+Aus diesem Grund schlug Herr Köhler vor, die Umbenennung des Vereins nur dann umzusetzen, falls der 1.~Vorstand Christoph Philipp Sterz in einer Diskussion mit dem Chaos Computer Club eine Notwendigkeit für die Umbenennung feststellt und diese dem Vorstand mitteilt.
+%Zu diesem Zwecke wird eine Rückmeldung von Herrn Sterz bis zum 3. Juni erwartet.
+Die Vereinsumbenennung soll nur in Kraft treten, falls bis Ablauf des 3.~Juni 2019 keine Rückmeldung seitens Herrn Sterz vorliegt oder Herr Sterz vor Ablauf des 3.~Juni 2019 eine explizite Notwendigkeit für die Umbenennung des Vereins festgestellt und dem Vorstand mitgeteilt hat.
+
+Die Anwesenden stimmten einstimmig für die besprochene, vorbehaltliche Umbenennung des Vereins ({\vote{5}{0}{0}}).
+Die laut Satzung §~8 Abs.~1 notwendige Dreiviertelmehrheit im Falle einer Satzungsänderung wurde erreicht.
+
+\section{Aussetzen der Mitgliedsbeiträge im Mai 2019}
+
+Herr Köhler schlug vor, im Mai 2019 auf die Mitgliedsbeiträge der Mitglieder zu verzichten.
+Dem Vorschlag stimmten die Versammlungsmitglieder einstimmig zu ({\vote{5}{0}{0}}).
+
+Außerdem schlug Herr Köhler vor, die Mitgliedsbeitrage für den Juni 2019 zurückzustellen, bis ein Vereinskonto erstellt wurde und die Zahlungsdaten für Überweisungen den Mitgliedern mitgeteilt wurden.
+Auch diesem Vorschlag stimmten die Versammlungsmitglieder einstimmig zu ({\vote{5}{0}{0}}).
+
+\section{Sonstiges}
+
+Herr Köhler dankte den Mitgliedern für ihre Mitwirkung und fragte, ob es weitere Anträge oder Fragen gebe.
+Nachdem dies nicht der Fall war, schloss er die Versammlung um {19:23}~Uhr.
+
+\bigskip
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Ort, Datum%
+\end{textinput}%
+
+\noindent%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Protokollführer\\%
+		Patrick Lühne%
+		\vspace{16mm}%
+	\end{textinput}%
+\end{minipage}%
+
+\end{document}
