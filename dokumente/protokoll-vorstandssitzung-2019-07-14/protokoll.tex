@@ -1,0 +1,132 @@
+\documentclass[a4paper, 10pt, headings=normal]{scrartcl}
+\KOMAoptions{twoside=true}
+
+\usepackage[left=25mm, right=25mm, top=25mm, bottom=35mm, bindingoffset=10mm]{geometry}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+
+\usepackage{fontspec}
+\setmainfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\setsansfont{Barlow}[Numbers={Lining}, BoldFont=* SemiBold]
+\newfontface\textinputfont{Barlow Condensed}
+
+\setlength{\columnsep}{5mm}
+
+\usepackage{multicol}
+
+\usepackage{microtype}
+\linespread{1.25}
+\addtokomafont{disposition}{\linespread{1}}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{amssymb}
+
+\usepackage{tcolorbox}
+\definecolor{light-gray}{RGB}{238, 238, 238}
+\definecolor{medium-gray}{RGB}{211, 211, 211}
+\definecolor{alert}{RGB}{255, 73, 43}
+
+\usepackage{mdframed}
+
+\usepackage{calc}
+
+\newenvironment{textinput}[1]%
+{%
+	\par%
+	\vspace{0.75mm}%
+	\noindent%
+	\linespread{1}%
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+		\begin{minipage}[t]{\linewidth}%
+			\textinputfont\strut%
+}%
+{%
+			\strut%
+		\end{minipage}%
+	\end{tcolorbox}
+	\vspace{0.75mm}%
+}
+
+\newmdenv
+[
+	topline=false,
+	bottomline=false,
+	rightline=false,
+	linecolor=medium-gray,
+	linewidth=2pt,
+	usetwoside=false,
+	innerleftmargin=8.4pt,
+	innerrightmargin=0pt
+]{address}
+
+\newcommand{\votesign}[1]{\includegraphics[trim=0pt 0.15pt 0pt 0pt]{vote-#1.pdf}}
+\newcommand{\votesingle}[2]{\votesign{#1}~#2}
+\newcommand{\vote}[3]{\votesingle{yes}{#1}, \votesingle{no}{#2}, \votesingle{abstention}{#3}}
+
+\title{Protokoll der Vorstandssitzung des \\ \emph{Chaostreff Potsdam} e.~V. (CCCP) \\ am 14.~Juli 2019}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagestyle{myheadings}
+\markboth{Protokoll der Gründungsversammlung des \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}{Protokoll der Gründungsversammlung des \emph{Chaos Computer Club Potsdam} e.~V. (CCCP)}
+
+%\begin{multicols}{2}
+
+\thispagestyle{empty}
+
+\noindent Am heutigen Sonntag, 14.~Juli 2019, versammelten sich um 15:00~Uhr im
+\begin{address}\strut%
+	\textbf{freiLand Potsdam,} Haus 5
+
+	\noindent Friedrich-Engels-Str.~22
+
+	\noindent 14473~Potsdam
+\end{address}
+die Vorstandsmitglieder Sven Köhler und Patrick Lühne zu einer Vorstandssitzung, zu der Herr Köhler am Mittwoch, 10.~Juli 2019, eingeladen hatte.
+Die Vorstandssitzung war damit beschlussfähig.
+
+\section*{Beschlüsse}
+
+Der Vorstand beschließt eine Satzungsänderung entsprechend §~8 Abs.~2 der Satzung aufgrund eines Antwortschreibens des Amtsgerichts Potsdam, Abteilung für Registersachen vom 24.~Mai 2019.
+Folgende Änderungen werden vorgenommen.
+
+§~3 Abs.~3 Satz~1 wird wiefolgt neugefasst:
+\begin{address}\strut%
+	Eine Gemeinschaft von mindestens dem zehnten Teil der Mitglieder hat das Recht, vom Vorstand unter Nennung gewünschter Tagesordnungspunkte und gegebenenfalls abzustimmender Beschlussvorlagen die Einberufung einer Mitgliederversammlung zu verlangen.
+\end{address}
+
+§~5 Abs.~6 wird wiefolgt neugefasst:
+\begin{address}\strut%
+	Die Mitgliederversammlung bestimmt zu Beginn einen Protokollführer, der über die Beschlüsse der Mitgliederversammlung eine Niederschrift anfertigt und diese unterzeichnet.
+	Die Niederschrift ist allen Mitgliedern binnen vier Wochen nach der Versammlung zuzustellen.
+\end{address}
+
+\bigskip
+
+\begin{textinput}{0.5\linewidth - 2.5mm}%
+	Ort, Datum%
+\end{textinput}%
+
+\noindent%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Sven Köhler%
+		\vspace{20mm}%
+	\end{textinput}%
+\end{minipage}%
+\hspace*{2.91mm}%
+\begin{minipage}[c]{0.5\linewidth - 2.5mm}%
+	\begin{textinput}{\linewidth}%
+		Unterschrift Patrick Lühne%
+		\vspace{20mm}%
+	\end{textinput}%
+\end{minipage}%
+
+\end{document}
