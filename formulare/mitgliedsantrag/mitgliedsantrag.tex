@@ -11,6 +11,7 @@
 \newfontface\textinputfont{Barlow Condensed}
 
 \setlength{\columnsep}{6mm}
+\setlength{\parindent}{0pt}
 
 \usepackage{microtype}
 \linespread{1.25}
@@ -32,18 +33,22 @@
 \newenvironment{textinput}[1]%
 {%
 	\par%
-	\vspace{0.75mm}%
+	\vspace{0pt}%
 	\noindent%
 	\linespread{1}%
-	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-0.3mm, right=1mm, width=#1]
+	\begin{tcolorbox}[colback=light-gray, sharp corners=all, boxrule=0pt, colframe=light-gray, left=1mm, top=0.3mm, bottom=-1.9mm, right=1mm, width=#1]
+		\strut%
 		\begin{minipage}[b]{\linewidth}%
 			\textinputfont\strut%
+			\vspace*{0pt}%
 }%
 {%
+			\vspace*{0pt}%
 			\strut%
 		\end{minipage}%
+		\strut%
 	\end{tcolorbox}
-	\vspace{0.75mm}%
+	\vspace{0pt}%
 }
 
 \newcommand{\checkbox}[1]%
@@ -70,6 +75,9 @@
 
 \section*{Persönliche Daten}
 
+\vspace*{2mm}
+
+\noindent%
 \begin{textinput}{\linewidth}%
 	Vorname, Name
 \end{textinput}
@@ -98,15 +106,16 @@
 
 \section*{Mitgliedsbeitrag}
 
-\noindent%
-\begin{minipage}[c]{0.5\linewidth - 1.455mm}%
+\vspace*{-4mm}
+
+\begin{minipage}[t]{0.5\linewidth - 1.455mm}%
 	\checkbox{regulär {\footnotesize (23,42~€ pro Monat)}}%
 	\checkbox{Studierende {\footnotesize (13,37~€ pro Monat)}}%
 	\checkbox{ermäßigt {\footnotesize (9,00~€ pro Monat)}}%
 	\checkbox{unter 16 Jahren {\footnotesize (2,56~€ pro Monat)}}%
 \end{minipage}%
 \hspace*{2.91mm}%
-\begin{minipage}[c]{0.5\linewidth - 1.455mm}%
+\begin{minipage}[t]{0.5\linewidth - 1.455mm}%
 	\begin{textinput}{\linewidth}%
 		Begründung \footnotesize (falls ermäßigt; erforderliche Nachweise bitte beifügen)%
 		\vspace{20mm}%
